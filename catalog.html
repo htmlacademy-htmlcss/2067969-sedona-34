@@ -115,7 +115,7 @@
            <p class="card-type">Гостиница</p>
            <p class="card-price">от 4000₽</p>
            <a class="hotel-card-discription button" href="#">ПОДРОБНЕЕ</a>
-           <button class="hotel-card-favorites" type="submit">В ИЗБРАННОЕ</button>
+           <a class="hotel-card-favorites" href="#">В ИЗБРАННОЕ</a>
            <img src="#" alt="4 звезды">
            <a class="hotel-raiting" href="#">Рейтинг 8,5</a>
          </li>
@@ -127,7 +127,7 @@
            <p class="card-type">Гостиница</p>
            <p class="card-price">от 5000₽</p>
            <a class="hotel-card-discription button" href="#">ПОДРОБНЕЕ</a>
-           <button class="hotel-card-favorites" type="submit" checked>В ИЗБРАННОМ</button>
+           <a class="hotel-card-favorites" href="#" checked>В ИЗБРАННОM</a>
            <img src="#" alt="4 звезды">
            <a class="hotel-raiting" href="#">Рейтинг 9,2</a>
          </li>
@@ -139,7 +139,7 @@
            <p class="card-type">Гостиница</p>
            <p class="card-price">от 2500₽</p>
            <a class="hotel-card-discription button" href="#">ПОДРОБНЕЕ</a>
-           <button class="hotel-card-favorites" type="submit">В ИЗБРАННОЕ</button>
+           <a class="hotel-card-favorites" href="#">В ИЗБРАННОЕ</a>
            <img src="#" alt="3 звезды">
            <a class="hotel-raiting" href="#">Рейтинг 6,9</a>
          </li>
@@ -151,7 +151,7 @@
            <p class="card-type">Гостиница</p>
            <p class="card-price">от 1500₽</p>
            <a class="hotel-card-discription button" href="#">ПОДРОБНЕЕ</a>
-           <button class="hotel-card-favorites" type="submit" >В ИЗБРАННОЕ</button>
+           <a class="hotel-card-favorites" href="#">В ИЗБРАННОЕ</a>
            <img src="#" alt="2 звезды">
            <a class="hotel-raiting" href="#">Рейтинг 5,0</a>
          </li>
@@ -181,8 +181,43 @@
          <output name="amount">[4]</output>
        </div>
      </section>
-
-
+     <section class="subscribe">
+      <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+      <p class="subscribe-discription">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <form class="subscribe-form" action="http:/echo.htmlacademy.ru/" method="post">
+        <label for="e-mail" class="visually-hidden">E-mail</label>
+        <input type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
+        <button type="submit" class="subscribe-button">Подписаться</button>
+      </form>
+    </section>
     </main>
+    <footer class="page-footer">
+      <section class="footer-social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="button" href="https://vk.com/htmlacademy"><span class="visually-hidden">Vkontakte</span></a>
+          </li>
+          <li class="social-item">
+            <a class="button" href="https://t.me/htmlacademy"><span class="visually-hidden">Telegram</span></a>
+          </li>
+          <li class="social-item">
+            <a class="button" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Youtube</span></a>
+          </li>
+        </ul>
+      </section>
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <address class="contacts-address">
+          <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
+        </address>
+      </section>
+      <section class="copyright-logo">
+        <h2 class="visually-hidden">Сайт разработан в</h2>
+        <a class="copyright-logo-link" href="https://htmlacademy.ru/">
+          <img class="copyright-logo-image" src="#"  alt="Логотип html academy">
+        </a>
+      </section>
+    </footer>
   </body>
 </html>
