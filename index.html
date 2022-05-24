@@ -35,76 +35,64 @@
       </nav>
     </header>
 
-     <main class="main-index">
-       <h1 class="visually-hidden">Туристический сайт городка Седона</h1>
-       <section class="welcome">
-         <h2 class="visually-hidden">Приветствие</h2>
-         <!-- нужно ли img в параграф с описанием? -->
-         <p class="tagline">
-           <img class="tagline-image" src="#"  alt="Welcome to the georgeous SEDONA because the Grand Canyon sucks ">
-           <strong>Седона — небольшой городок в Аризоне,
-            заслуживающий большего!</strong>
-         </p>
-         <p class="tagline-discription">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-       </section>
-       <section class="advantages">
-         <h2 class="visually-hidden">Преимущества</h2>
-         <ul class="advantages-list">
-           <li class="advantages-item">
-             <h3 class="advantages-title">Настоящий городок</h3>
-             <!-- сомневаюсь, но выделила номера преимуществ в описание, тк считаю, что список
-              неупорядоченный -->
-             <p class="advantage-number">- №1 -</p>
-             <p class="advantages-discrition">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-             <img class="sedona-image" src="#" alt="Американский городок, мотель с флагами и видом на горы">
-             <!-- сделала список в списке, но не уверена, да они относятся к преимуществам городка,
-              и их заголовки должны быть на уровень ниже или нет? -->
-             <ul class="advantages-list">
-              <li class="advantages-item">
-                <h3 class="advantages-title">Жильё</h3>
-                <p class="advantages-discrition">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-              </li>
-              <li class="advantages-item">
-                <h3 class="advantages-title">Еда</h3>
-                <p class="advantages-discrition">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
-              </li>
-              <li class="advantages-item">
-                <h3 class="advantages-title">Сувениры</h3>
-                <p class="advantages-discrition">Не только китайского, но и настоящего местного производства!</p>
-              </li>
-            </ul>
-           </li>
-           <li class="advantages-item">
-            <h3 class="advantages-title">Там есть мост дьявола</h3>
-            <p class="advantage-number">- №2 -</p>
-            <img class="bridge-image" src="" alt="Скалы в виде моста над пропастью">
-            <p class="advantages-discrition">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-           </li>
-           <li class="advantages-item">
-            <h3 class="advantages-title">Небольшая площадь</h3>
-            <p class="advantage-number">- №3 -</p>
-            <p class="advantages-discrition">Все достопримечательности находятся очень близко</p>
-           </li>
-           <li class="advantages-item">
-            <h3 class="advantages-title">Красивая дорога</h3>
-            <p class="advantage-number">- №4 -</p>
-            <p class="advantages-discrition">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-           </li>
-           <li class="advantages-item">
-            <h3 class="advantages-title">Мало туристов</h3>
-            <p class="advantage-number">- №5 -</p>
-            <p class="advantages-discrition">Большинство едет в Гранд Каньон и толпится там</p>
-           </li>
-         </ul>
-       </section>
-       <section class="search-hotel">
-        <h2 class="visually-hidden">Поиск гостиницы</h2>
-         <b>Заинтересовались?</b>
-         <p class="search-hotel-discription">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
-         </p>
-         <a class="button" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
-       </section>
-      </main>
+    <main class="main-index">
+      <h1 class="visually-hidden">Туристический сайт городка Седона</h1>
+        <section class="welcome">
+          <h2 class="visually-hidden">Приветствие</h2>
+          <img class="welcome-image" src="#" alt="Welcome to the georgeous SEDONA because the Grand Canyon sucks ">
+        </section>
+        <section class="advantages">
+          <h2 class="advantages-title">Седона — небольшой городок в Аризоне,
+          заслуживающий большего!</h2>
+          <p class="advantages-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+          <ol class="advantages-list">
+            <li class="advantages-item">
+              <h3 class="advantages-title">Настоящий городок</h3>
+              <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <img class="sedona-image" src="#" alt="Американский городок, мотель с флагами и видом на горы">
+             <!-- заголовки во вложенном списке должны быть на уровень ниже или нет? -->
+              <ul class="town-advantages-list">
+                <li class="town-advantages-item">
+                  <h3 class="town-advantages-title">Жильё</h3>
+                  <p class="town-advantages-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                </li>
+                <li class="town-advantages-item">
+                  <h3 class="town-advantages-title">Еда</h3>
+                  <p class="town-advantages-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+                </li>
+                <li class="town-advantages-item">
+                  <h3 class="town-advantages-title">Сувениры</h3>
+                  <p class="town-advantages-description">Не только китайского, но и настоящего местного производства!</p>
+                </li>
+              </ul>
+            </li>
+            <li class="advantages-item">
+              <h3 class="advantages-title">Там есть мост дьявола</h3>
+              <img class="bridge-image" src="" alt="Скалы в виде моста над пропастью">
+              <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </li>
+            <li class="advantages-item">
+              <h3 class="advantages-title">Небольшая площадь</h3>
+              <p class="advantages-description">Все достопримечательности находятся очень близко</p>
+            </li>
+            <li class="advantages-item">
+              <h3 class="advantages-title">Красивая дорога</h3>
+              <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li class="advantages-item">
+              <h3 class="advantages-title">Мало туристов</h3>
+              <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
+            </li>
+          </ol>
+        </section>
+        <section class="search-hotel">
+          <h2 class="visually-hidden">Поиск гостиницы</h2>
+          <b>Заинтересовались?</b>
+          <p class="search-hotel-discription">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+          </p>
+          <a class="button" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+        </section>
+    </main>
       <footer class="page-footer">
         <!-- включила секцию о подписке в футер, тк инфо повторяется на страницах, но в макете этот не включен в футер -->
         <section class="footer-subscribe">
