@@ -46,23 +46,24 @@
             <a class="breadcrumb-link">Гостиницы</a>
           </li>
         </ul>
-        <section class="hotels-filter">
-          <h2 class="visually-hidden">Фильтр гостиниц</h2>
-          <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="hotels-filter-group">
-              <legend class="hotels-filter-title">Инфраструктура:</legend>
-              <label class="control">
-                <input class="control-input" type="checkbox" name="swim-pool" value="swim-pool" checked>Бассейн
-              </label>
-              <label class="control">
-                <input class="control-input" type="checkbox" name="parking" value="parking" checked>Парковка
-              </label>
-              <label class="control">
-                <input class="control-input" type="checkbox" name="wifi" value="wi-fi">Wi-Fi
-              </label>
-            </fieldset>
-            <fieldset class="hotels-filter-group">
-              <legend class="hotels-filter-title">Тип жилья:</legend>
+      </header>
+      <section class="hotels-filter">
+        <h2 class="visually-hidden">Фильтр каталога гостиниц</h2>
+        <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="hotels-filter-group">
+            <legend class="hotels-filter-title">Инфраструктура:</legend>
+            <label class="control">
+              <input class="control-input" type="checkbox" name="swim-pool" value="swim-pool" checked>Бассейн
+            </label>
+            <label class="control">
+              <input class="control-input" type="checkbox" name="parking" value="parking" checked>Парковка
+            </label>
+            <label class="control">
+              <input class="control-input" type="checkbox" name="wifi" value="wi-fi">Wi-Fi
+            </label>
+          </fieldset>
+          <fieldset class="hotels-filter-group">
+            <legend class="hotels-filter-title">Тип жилья:</legend>
               <ul class="hotels-filter-list">
                 <li class="hotels-filter-item">
                   <label class="control">
@@ -80,22 +81,32 @@
                   </label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="price-filter-group">
-              <legend class="price-fiter-title">Стоимость, ₽:</legend>
-              <label class="price-control">
-                <input class="price-input" type="number" name="price" id="min-price" min="0" max="9000" step="1" value="0">
-                <span class="min-price-input">от</span>
-                <input class="price-input" type="number" name="price" id="max-price" min="0" max="9000" step="1" value="9000">
-                <span class="max-price-input">до</span>
-                <!-- здесь должен быть range с двумя бегунками -->
-              </label>
-            </fieldset>
-            <button class="button" type="submit" value="Применить">Применить</button>
-            <button class="reset-button" type="reset" value="Сбросить">Сбросить</button>
-          </form>
-        </section>
-      </header>
+          </fieldset>
+          <fieldset class="price-filter-group">
+            <legend class="price-fiter-title">Стоимость, ₽:</legend>
+              <input class="price-input" type="number" name="price" id="min-price" min="0" max="9000" step="1" value="0">
+              <span class="min-price-input">от</span>
+              <input class="price-input" type="number" name="price" id="max-price" min="0" max="9000" step="1" value="9000">
+              <span class="max-price-input">до</span>
+              <!-- здесь должен быть range с двумя бегунками -->
+          </fieldset>
+          <button class="button" type="submit" value="Применить">Применить</button>
+          <button class="reset-button" type="reset" value="Сбросить">Сбросить</button>
+          <!-- не уверена, что верно разместила output -->
+          <label class="hotels-results">Найдено гостиниц:
+            <output class="hotels-sum">[38]</output>
+          </label>
+        </form>
+      </section>
+      <select class="select-control" aria-label="Сортировка">
+        <option value="cheap">Сначала дешевые</option>
+        <option value="expensive">Сначала дорогие</option>
+        <option value="popular">Сначала популярные</option>
+      </select>
+      <a href="#" class="button button-light">иконка карточек</a>
+      <a href="#" class="button"><span class="visually-hidden">иконка галереи</span></a>
+      <a href="#" class="button"><span class="visually-hidden">иконка списка</span></a>
+
 
     </main>
   </body>
