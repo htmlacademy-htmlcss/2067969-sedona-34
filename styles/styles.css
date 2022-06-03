@@ -16,9 +16,13 @@
 
 body {
   font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 22px;
+  line-height: 26px;
   color: #000000;
+  background-color: #F2F2F2;
+}
+
+.main-conteiner {
   background-color: #ffffff;
 }
 
@@ -28,27 +32,28 @@ body {
   font-weight: 700;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   color: #ffffff;
 }
 
 .user-list-button {
-  background: #756157;
+  background-color: #756157;
 }
 
 .submit-button {
-  background: #82B3D3;
+  background-color: #82B3D3;
 }
 
 .hotel-card-discription {
-  background: #756157;
+  background-color: #756157;
 }
 
 .hotel-card-favorites {
-  background: #82B3D3;
+  background-color: #82B3D3;
 }
 
-.hotel-card-favorites .favorite {
-  background: #7DB54F;
+.favorite {
+  background-color: #7DB54F;
 }
 
 .basic-button {
@@ -62,11 +67,11 @@ body {
 }
 
 .subscribe-button {
-  background: #82B3D3;
+  background-color: #82B3D3;
 }
 
 .search-button {
-  background: #756157;
+  background-color: #756157;
 }
 
 .navigation-link {
@@ -85,7 +90,7 @@ body {
 
 .main-index {
   color: #000000;
-  background: #ffffff;
+  background-color: #ffffff;
 }
 
 .welcome {
@@ -95,8 +100,10 @@ body {
 }
 
 .advantages-list {
-  background: #ffffff;
-  color: #000000;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #ffffff;
+  color: #333333;
   text-align: center;
 }
 
@@ -108,8 +115,6 @@ body {
 }
 
 .advantages-text {
-  font-size: 22px;
-  line-height: 26px;
   color: #333333;
 }
 
@@ -121,38 +126,36 @@ body {
   text-transform: uppercase;
 }
 
-.city-item,
-.bridge-item {
-  background: #82B3D3;
+.no-foto-item .advantages-title {
+  color: #000000;
+}
+
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item:nth-child(even) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item .advantage-conteiner {
+  background-color: #82B3D3;
   color: #ffffff;
 }
 
-.area-item,
-.tourists-item {
-  background: rgba(131, 179, 211, 0.12);
-}
-
-.road-item {
-  background: rgba(131, 179, 211, 0.2);
-}
-
-.area-item .advantages-description,
-.road-item .advantages-description,
-.tourists-item .advantages-description {
+.town-advantages-list {
+  background-color: #ffffff;
   color: #333333;
+  font-size: 18px;
+  line-height: 21px;
 }
 
-.housing.town-advantages-item,
-.souvenirstown-advantages-item {
-  background: rgba(131, 179, 211, 0.12);
+.town-advantages-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .town-advantages-title {
   color: #000000;
-}
-
-.town-advantages-description {
-  color: #333333;
 }
 
 .search-hotel {
@@ -167,8 +170,6 @@ body {
 }
 
 .search-hotel-discription {
-  font-size: 22px;
-  line-height: 26px;
   color: #333333;
 }
 
@@ -189,11 +190,6 @@ body {
   text-transform: uppercase;
 }
 
-.subscribe-discription {
-  font-size: 22px;
-  line-height: 26px;
-}
-
 .contacts-phone {
   font-size: 40px;
   line-height: 40px;
@@ -203,8 +199,12 @@ body {
   color: inherit;
 }
 
+.inner-conteiner {
+  background-color: #ffffff;
+}
+
 .inner-header {
-  background: #333333;
+  background-color: #000000;
   color: #ffffff;
   background-image: url(../images/background/filter-background.jpg);
   background-repeat: no-repeat;
@@ -228,10 +228,16 @@ body {
   text-align: left;
 }
 
-.hotels-filter-title {
+.hotels-filter-title,
+.price-fiter-title {
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
+}
+
+.control-input {
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .hotels-results {
@@ -263,7 +269,7 @@ body {
   line-height: 20px;
   text-align: center;
   color: #333333;
-  background: #F2F2F2;
+  background-color: #F2F2F2;
 }
 
 .pagination-link {
@@ -273,12 +279,12 @@ body {
   text-align: center;
   text-decoration: none;
   color: #ffffff;
-  background: #82B3D3;
+  background-color: #82B3D3;
 }
 
 .pagination-current {
   color: #000000;
-  background: #F2F2F2;
+  background-color: #F2F2F2;
 }
 
 .page-items {
@@ -287,5 +293,5 @@ body {
 
 .page-item-control {
   color: #333333;
-  background: #E5E5E5;
+  background-color: #E5E5E5;
 }
