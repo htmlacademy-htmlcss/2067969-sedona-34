@@ -9,7 +9,7 @@
 
 <body>
   <div class="inner-container">
-    <header>
+    <header class="page-header">
       <nav class="navigation">
         <a class="page-header-logo" href="index.html">
           <img class="logo-sedona" src="images/logo.svg" width="139" height="70" alt="Логотип сайта городка Седона">
@@ -39,7 +39,7 @@
       </nav>
     </header>
 
-    <main class="main-inner">
+    <main class="main-container main-inner">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ol class="breadcrumbs-list">
@@ -53,7 +53,7 @@
         <section class="hotels-filter">
           <h2 class="visually-hidden">Фильтры гостиниц</h2>
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="hotels-filter-group">
+            <fieldset class="hotels-filter-group infrastructure-filter">
               <legend class="hotels-filter-title">Инфраструктура:</legend>
               <label class="control">
                 <input class="control-input" type="checkbox" name="swim-pool" value="swim-pool" checked>Бассейн
@@ -65,7 +65,7 @@
                 <input class="control-input" type="checkbox" name="wifi" value="wi-fi">Wi-Fi
               </label>
             </fieldset>
-            <fieldset class="hotels-filter-group">
+            <fieldset class="hotels-filter-group housing-type-filter">
               <legend class="hotels-filter-title">Тип жилья:</legend>
               <ul class="hotels-filter-list">
                 <li class="hotels-filter-item">
@@ -86,8 +86,8 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="price-filter-group">
-              <legend class="price-fiter-title">Стоимость, ₽:</legend>
+            <fieldset class="hotels-filter-group price-filter">
+              <legend class="hotels-fiter-title">Стоимость, ₽:</legend>
               <label class="price-control">
                 <input class="price-input" type="number" name="price" id="min-price" min="0" max="9000" step="1"
                   value="0">от
@@ -104,7 +104,8 @@
         </section>
       </header>
       <section class="hotels-catalog-view">
-        <h2 class="visually-hidden">Каталог гостиниц с настройками вида</h2>
+        <!-- временно, для сетки
+        <h2 class="visually-hidden">Каталог гостиниц с настройками вида</h2> -->
         <div class="catalog-view">
           <p class="hotels-results">Найдено гостиниц:<span>38</span></p>
           <select class="select-control" aria-label="Сортировка">
@@ -200,46 +201,48 @@
           </label>
         </div>
       </section>
-      <section class="subscribe">
+      <section class="subscribe catalog-subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-discription">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="http:/echo.htmlacademy.ru" method="post">
           <label for="e-mail" class="visually-hidden">E-mail</label>
-          <input type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
+          <input type="email" class="e-mail-field" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
           <button type="submit" class="subscribe-button basic-button">Подписаться</button>
         </form>
       </section>
     </main>
     <footer class="page-footer">
-      <section class="footer-social">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="social-list">
-          <li class="social-item">
-            <a class="button" href="https://vk.com/htmlacademy"><span class="visually-hidden">Vkontakte</span></a>
-          </li>
-          <li class="social-item">
-            <a class="button" href="https://t.me/htmlacademy"><span class="visually-hidden">Telegram</span></a>
-          </li>
-          <li class="social-item">
-            <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Youtube</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <address class="contacts-address">
-          <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-        </address>
-      </section>
-      <section class="copyright-logo">
-        <h2 class="visually-hidden">Сайт разработан в</h2>
-        <a class="copyright-logo-link" href="https://htmlacademy.ru/">
-          <img class="copyright-logo-image" src="images/logo_htmlacademy.svg" width="115" height="33"
-            alt="Логотип html academy">
-        </a>
-      </section>
+      <div class="footer-container">
+        <section class="footer-social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="social-list">
+            <li class="social-item">
+              <a class="button" href="https://vk.com/htmlacademy"><span class="visually-hidden">Vkontakte</span></a>
+            </li>
+            <li class="social-item">
+              <a class="button" href="https://t.me/htmlacademy"><span class="visually-hidden">Telegram</span></a>
+            </li>
+            <li class="social-item">
+              <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Youtube</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <address class="contacts-address">
+            <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
+          </address>
+        </section>
+        <section class="copyright-logo">
+          <h2 class="visually-hidden">Сайт разработан в</h2>
+          <a class="copyright-logo-link" href="https://htmlacademy.ru/">
+            <img class="copyright-logo-image" src="images/logo_htmlacademy.svg" width="115" height="33"
+              alt="Логотип html academy">
+          </a>
+        </section>
+      </div>
     </footer>
   </div>
 </body>
