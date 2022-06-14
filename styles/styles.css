@@ -22,6 +22,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  min-width: 1200px;
   min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
@@ -68,6 +69,7 @@ body {
 }
 
 .basic-button {
+  width: 200px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -91,7 +93,8 @@ body {
 }
 
 .page-header {
-  width: 1200px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .page-header-logo {
@@ -100,7 +103,6 @@ body {
 
 .navigation {
   display: flex;
-  width: 1060px;
   margin: 0 auto;
 }
 
@@ -141,8 +143,9 @@ body {
 }
 
 .welcome {
-  width: 1200px;
   margin: 0 auto;
+  padding-top: 51px;
+  padding-bottom: 82px;
   background-image: url(../images/background/index-background.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -152,8 +155,6 @@ body {
   display: block;
   width: 458px;
   margin: 0 auto;
-  padding-top: 51px;
-  padding-bottom: 82px;
 }
 
 .advantages-list {
@@ -175,7 +176,6 @@ body {
 .advantages-main-title {
   width: 700px;
   margin: 0 auto;
-  padding: 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -217,7 +217,7 @@ body {
   width: 800px;
 }
 
-advantage-foto img {
+.advantage-foto img {
   display: block;
   width: 100%;
   height: 100%;
@@ -270,7 +270,7 @@ advantage-foto img {
   text-transform: uppercase;
 }
 
-.search-hotel-discription {
+.search-hotel-description {
   display: block;
   margin: 0 auto;
   width: 592px;
@@ -278,13 +278,11 @@ advantage-foto img {
 }
 
 .subscribe {
-  width: 1200px;
-  height: 411px;
-  margin: 0 auto;
+  padding: 94px 200px;
   text-align: center;
   color: #ffffff;
   background-image: url(../images/background/subscibe-background.jpg);
-  background-size: 100% 417px;
+  background-size: 100% 411px;
   background-repeat: no-repeat;
 }
 
@@ -295,24 +293,38 @@ advantage-foto img {
   text-transform: uppercase;
 }
 
-.subscribe-discription {
+.subscribe-description {
   width: 475px;
   margin: 0 auto;
+}
+
+.subscribe-form {
+  width: 800px;
 }
 
 .e-mail-field {
   width: 600px;
 }
 
+.catalog-subscribe {
+  background-image: none;
+  color: #333333;
+}
+
+.catalog-subscribe-title {
+  color: #000000;
+}
+
 .footer-container {
   display: flex;
   margin: 0 auto;
-  width: 1060px;
+  padding-left: 70px;
+  padding-right: 70px;
   justify-content: space-between;
 }
 
 .footer-social {
-  width: 142px;
+  width: 200px;
 }
 
 .contacts-phone {
@@ -326,13 +338,6 @@ advantage-foto img {
 
 .copyright-logo {
   width: 115px;
-}
-
-.inner-container {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2)
 }
 
 .inner-header {
@@ -363,26 +368,16 @@ advantage-foto img {
   text-decoration: none;
 }
 
-/* у всех фильтров не целые значения ширины указаны в макете, те что я указала я округлила, так можно?
-или может проценты указывать? */
 .filter {
   display: flex;
 }
 
-.infrastructure-filter {
+.left-filter {
   display: flex;
   flex-direction: column;
   padding: 0;
-  width: 151px;
-  margin-right: 70px;
-}
-
-.housing-type-filter {
-  width: 146px;
-}
-
-.housing-type-filter {
-  width: 146px;
+  width: 200px;
+  margin-right: 20px;
 }
 
 .hotels-filter-group {
@@ -402,21 +397,17 @@ advantage-foto img {
 
 .catalog-view {
   display: flex;
-  width: 1057px;
   margin: 0 auto;
-}
-
-.hotels-results {
-  min-width: 338px;
-  margin-right: 191px;
+  padding: 50px 71px 56px 72px;
 }
 
 .select-control {
   width: 290px;
-  margin-right: 78px;
 }
 
 .hotels-results {
+  min-width: 338px;
+  margin-right: auto;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -426,9 +417,8 @@ advantage-foto img {
 .hotels-list {
   display: flex;
   flex-wrap: wrap;
-  width: 1056px;
   margin: 0 auto;
-  padding: 0;
+  padding: 56px 71px 66px 73px;
   justify-content: space-between;
 }
 
@@ -457,6 +447,21 @@ advantage-foto img {
   background-color: #F2F2F2;
 }
 
+.pagination-view {
+  display: flex;
+  align-items: center;
+  width: 1056px;
+  margin: 0 auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin: 0;
+  padding: 0;
+}
+
 .pagination-link {
   font-size: 20px;
   line-height: 36px;
@@ -465,6 +470,8 @@ advantage-foto img {
   text-decoration: none;
   color: #ffffff;
   background-color: #82B3D3;
+  width: 60px;
+  display: block;
 }
 
 .pagination-current {
@@ -473,10 +480,13 @@ advantage-foto img {
 }
 
 .page-items {
+  width: 386px;
+  margin-left: auto;
   color: #333333
 }
 
-.page-item-control {
+.pagination-control {
+  width: 160px;
   color: #333333;
   background-color: #E5E5E5;
 }

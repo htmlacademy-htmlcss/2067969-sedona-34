@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="inner-container">
+  <div class="body-container">
     <header class="page-header">
       <nav class="navigation">
         <a class="page-header-logo" href="index.html">
@@ -42,18 +42,18 @@
     <main class="main-container main-inner">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
-        <ol class="breadcrumbs-list">
+        <ul class="breadcrumbs-list">
           <li class="breadcrumb-item">
             <a class="breadcrumb-link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumb-item">
             <a class="breadcrumb-link">Гостиницы</a>
           </li>
-        </ol>
+        </ul>
         <section class="hotels-filter">
           <h2 class="visually-hidden">Фильтры гостиниц</h2>
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="hotels-filter-group infrastructure-filter">
+            <fieldset class="hotels-filter-group left-filter">
               <legend class="hotels-filter-title">Инфраструктура:</legend>
               <label class="control">
                 <input class="control-input" type="checkbox" name="swim-pool" value="swim-pool" checked>Бассейн
@@ -65,7 +65,7 @@
                 <input class="control-input" type="checkbox" name="wifi" value="wi-fi">Wi-Fi
               </label>
             </fieldset>
-            <fieldset class="hotels-filter-group housing-type-filter">
+            <fieldset class="hotels-filter-group left-filter">
               <legend class="hotels-filter-title">Тип жилья:</legend>
               <ul class="hotels-filter-list">
                 <li class="hotels-filter-item">
@@ -98,8 +98,10 @@
               </label>
               <!-- здесь должен быть: нужного вида блок на дивах, спанах и кнопках -->
             </fieldset>
-            <button class="submit-button small-button" type="submit" value="Применить">Применить</button>
-            <button class="reset-button" type="reset" value="Сбросить">Сбросить</button>
+            <div class="filter-button">
+              <button class="submit-button small-button" type="submit" value="Применить">Применить</button>
+              <button class="reset-button" type="reset" value="Сбросить">Сбросить</button>
+            </div>
           </form>
         </section>
       </header>
@@ -193,7 +195,7 @@
             </li>
           </ul>
           <label class="page-items">Гостиниц на странице:
-            <select class="page-item-control">
+            <select class="select-control pagination-control">
               <option value="4">4</option>
               <option value="8">8</option>
               <option value="12">12</option>
@@ -202,8 +204,8 @@
         </div>
       </section>
       <section class="subscribe catalog-subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-discription">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <h2 class="subscribe-title catalog-subscribe-title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="http:/echo.htmlacademy.ru" method="post">
           <label for="e-mail" class="visually-hidden">E-mail</label>
           <input type="email" class="e-mail-field" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
