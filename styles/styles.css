@@ -450,19 +450,22 @@ body {
 .pagination-view {
   display: flex;
   align-items: center;
-  width: 1056px;
   margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .pagination {
   display: flex;
-  justify-content: space-between;
   width: 400px;
   margin: 0;
   padding: 0;
 }
 
 .pagination-link {
+  width: 60px;
+  display: block;
+  margin-right: 8px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -470,8 +473,6 @@ body {
   text-decoration: none;
   color: #ffffff;
   background-color: #82B3D3;
-  width: 60px;
-  display: block;
 }
 
 .pagination-current {
