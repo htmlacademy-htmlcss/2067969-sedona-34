@@ -50,7 +50,7 @@ body {
 }
 
 .small-button {
-  min-width: 160px;
+  min-width: 140px;
   min-height: 48px;
   border-radius: 5px;
   font-size: 16px;
@@ -60,6 +60,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #ffffff;
+  box-sizing: border-box;
 }
 
 .user-list-button {
@@ -92,6 +93,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #ffffff;
+  box-sizing: border-box;
 }
 
 .subscribe-button {
@@ -106,7 +108,7 @@ body {
 .search-button {
   display: block;
   width: 544px;
-  margin: 56px auto 93px;
+  margin: 0 auto;
   padding: 12px 15px;
   background-color: #756157;
 }
@@ -137,6 +139,7 @@ body {
 
 .user-list {
   display: flex;
+  align-items: center;
   max-width: 351px;
   margin: 0;
   margin-left: auto;
@@ -164,7 +167,7 @@ body {
 }
 
 .user-list-link {
-  display: block;
+  /* display: block; */
   min-width: 42px;
   min-height: 66px;
 }
@@ -193,6 +196,10 @@ body {
   margin: 0 auto;
 }
 
+.advantages {
+  padding-top: 63px;
+}
+
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
@@ -207,8 +214,6 @@ body {
 }
 
 .advantage-container {
-  display: flex;
-  flex-direction: column;
   width: 400px;
   padding: 92px 85px;
   box-sizing: border-box;
@@ -216,7 +221,7 @@ body {
 
 .advantages-main-title {
   width: 700px;
-  margin: 63px auto 31px;
+  margin: 0 auto 31px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -226,7 +231,7 @@ body {
 
 .advantages-text {
   max-width: 700px;
-  margin: 30px auto 90px;
+  margin: 0 auto 90px;
   color: #333333;
   text-align: center;
 }
@@ -234,7 +239,7 @@ body {
 .advantages-title,
 .town-advantages-title {
   max-width: 180px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -242,11 +247,11 @@ body {
 }
 
 .advantages-description {
-  margin: 30px 0 0;
+  margin: 0 0 30px;
 }
 
 .advantages-number {
-  margin: 30px 0 0;
+  margin: 0 0 30px;
 }
 
 .no-foto-item {
@@ -315,9 +320,8 @@ body {
 }
 
 .town-advantages-description {
-  margin: 30px auto 0;
+  margin: 0 auto 30px;
   max-width: 230px;
-  max-height: 63px;
 }
 
 .town-advantages-item:nth-child(odd) {
@@ -329,12 +333,14 @@ body {
 }
 
 .search-hotel {
+  padding-top: 91px;
+  padding-bottom: 93px;
   text-align: center;
 }
 
 .search-hotel-title {
   display: block;
-  margin: 91px auto 0;
+  margin: 0 auto 29px;
   width: 297px;
   font-size: 30px;
   line-height: 36px;
@@ -344,7 +350,7 @@ body {
 
 .search-hotel-description {
   display: block;
-  margin: 29px auto 0;
+  margin: 0 auto 56px;
   width: 592px;
   color: #333333;
 }
@@ -384,6 +390,7 @@ body {
   border-radius: 10px 0 0 10px;
   font-size: 18px;
   line-height: 21px;
+  background-color: #F2F2F2;
 }
 
 .catalog-subscribe {
@@ -455,7 +462,7 @@ body {
 }
 
 .inner-header-title {
-  margin: 0;
+  margin: 0 0 10px;
   padding: 0;
   font-size: 60px;
   line-height: 70px;
@@ -466,13 +473,12 @@ body {
 .breadcrumbs-list {
   display: flex;
   min-width: 110px;
-  margin: 10px auto 40px;
+  margin: 0 auto 40px;
   padding: 0;
   list-style-type: none;
 }
 
 .breadcrumb-link {
-  max-width: 73px;
   min-height: 21px;
   margin-right: 25px;
   font-size: 16px;
@@ -560,21 +566,24 @@ body {
   display: block;
   min-width: 48px;
   min-height: 48px;
-  margin-right: 8px;
+  margin-left: 8px;
 }
-
-.catalog-view:last-child {
-  margin-right: 0;
-}
-
 
 .hotels-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 56px 71px 66px 73px;
-  justify-content: space-between;
+  padding: 0 71px 66px 73px;
   list-style-type: none;
+}
+
+.hotel-card {
+  padding: 20px;
+  margin-right: 18px;
+}
+
+.hotel-card:nth-child(3n) {
+  margin-right: 0;
 }
 
 .hotel-card-link {
@@ -583,10 +592,27 @@ body {
 }
 
 .hotel-card-title {
+  margin: 0 0 16px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-align: left;
+}
+
+.hotel-card p {
+  margin: 0;
+}
+
+.hotel-card-image {
+  margin-bottom: 16px;
+}
+
+.hotel-card-content {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: auto min-content 37px;
+  row-gap: 16px;
+  column-gap: 20px;
 }
 
 .hotel-card .card-type,
@@ -595,6 +621,7 @@ body {
 }
 
 .hotel-raiting {
+  margin: 0;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
