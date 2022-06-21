@@ -51,7 +51,7 @@ body {
 
 .small-button {
   min-width: 140px;
-  min-height: 48px;
+  padding: 9px 15px;
   border-radius: 5px;
   font-size: 16px;
   line-height: 20px;
@@ -64,10 +64,12 @@ body {
 }
 
 .user-list-button {
+  display: block;
   background-color: #756157;
 }
 
 .submit-button {
+  padding: 14px 15px;
   background-color: #82B3D3;
   border: none;
 }
@@ -86,6 +88,7 @@ body {
 
 .basic-button {
   display: block;
+  padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -98,8 +101,6 @@ body {
 
 .subscribe-button {
   width: 200px;
-  min-height: 60px;
-  padding: 0;
   background-color: #82B3D3;
   border: none;
   border-radius: 0 10px 10px 0;
@@ -109,7 +110,7 @@ body {
   display: block;
   width: 544px;
   margin: 0 auto;
-  padding: 12px 15px;
+  border-radius: 4px;
   background-color: #756157;
 }
 
@@ -158,18 +159,16 @@ body {
   color: inherit;
 }
 
-/* .navigation-link:last-child {
-  padding-right: 62px;
-} */
-
 .navigation-link-current {
   text-decoration: underline;
 }
 
 .user-list-link {
-  /* display: block; */
+  display: block;
   min-width: 42px;
-  min-height: 66px;
+  /* min-height: 66px;  получилось вертикальное выравнивание, если убираю min-height, и ставлю вертикальные паддинги, это верно? */
+  padding: 24px 0 25px;
+  text-align: center;
 }
 
 .main-container {
@@ -570,8 +569,9 @@ body {
 }
 
 .hotels-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
   margin: 0 auto;
   padding: 0 71px 66px 73px;
   list-style-type: none;
@@ -579,7 +579,6 @@ body {
 
 .hotel-card {
   padding: 20px;
-  margin-right: 18px;
 }
 
 .hotel-card:nth-child(3n) {
