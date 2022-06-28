@@ -52,7 +52,7 @@ body {
 .small-button {
   min-width: 140px;
   padding: 9px 15px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -66,6 +66,30 @@ body {
 .user-list-button {
   display: block;
   background-color: #756157;
+  margin-left: 19px;
+}
+
+.small-button:disabled {
+  background-color: #E5E5E5;
+}
+
+.user-list-button:hover,
+.search-button:hover,
+.hotel-card-description:hover {
+  background-color: #615048;
+}
+
+.user-list-button:focus,
+.search-button:focus,
+.hotel-card-description:focus {
+  background-color: #615048;
+}
+
+.user-list-button:active,
+.search-button:active,
+.hotel-card-description:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3)
 }
 
 .submit-button {
@@ -74,7 +98,11 @@ body {
   border: none;
 }
 
-.hotel-card-discription {
+.submit-button:disabled {
+  background-color: #E5E5E5;
+}
+
+.hotel-card-description {
   background-color: #756157;
 }
 
@@ -99,6 +127,10 @@ body {
   box-sizing: border-box;
 }
 
+.basic-button:disabled{
+  background-color: #E5E5E5;
+}
+
 .subscribe-button {
   width: 200px;
   background-color: #82B3D3;
@@ -114,13 +146,48 @@ body {
   background-color: #756157;
 }
 
+.subscribe-button:hover,
+.submit-button:hover,
+.hotel-card-favorites:hover {
+  background-color: #68A2CA;
+}
+
+.subscribe-button:focus,
+.submit-button:focus,
+.hotel-card-favorites:focus {
+  background-color: #68A2CA;
+}
+
+.subscribe-button:active,
+.submit-button:active,
+.hotel-card-favorites:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.favorite:hover {
+  background-color: #6C9E42;
+}
+
+.favorite:focus {
+  background-color: #6C9E42;
+}
+
+.favorite:active {
+  background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .page-header {
   padding-left: 70px;
   padding-right: 70px;
 }
 
 .page-header-logo {
+  position: relative;
   margin-right: 30px;
+  margin-bottom: -5px; /* неполучается заступ на 5px на след блок */
+  z-index: 1;
 }
 
 .navigation {
@@ -148,6 +215,10 @@ body {
   list-style-type: none;
 }
 
+.navigation-item {
+  position: relative;
+}
+
 .navigation-link {
   display: block;
   padding: 20px 17px;
@@ -159,16 +230,49 @@ body {
   color: inherit;
 }
 
-.navigation-link-current {
-  text-decoration: underline;
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: 62px;
+  left: 17px;
+  right: 17px;
+  background-color: #756257;
 }
 
 .user-list-link {
+  position: relative;
   display: block;
   min-width: 42px;
-  /* min-height: 66px;  получилось вертикальное выравнивание, если убираю min-height, и ставлю вертикальные паддинги, это верно? */
   padding: 24px 0 25px;
   text-align: center;
+}
+
+.user-list-item:nth-child(1) .user-list-link {
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.user-list-item:nth-child(2) .user-list-link {
+  background-image: url("../images/icons/favorite.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.user-list-item:nth-child(2) .user-list-link::before {
+  content: "12";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  top: 5px;
+  left: 24px;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center; /* контент не выравнивается по центру */
+  color: #FFFFFF;
 }
 
 .main-container {
@@ -184,9 +288,18 @@ body {
   margin: 0 auto;
   padding-top: 51px;
   padding-bottom: 82px;
-  background-image: url(../images/background/index-background.jpg);
+  background-image: url("../images/background/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+/* не отображается, по высоте в браузере 0, почему так? */
+.welcome-mask {
+  background-image: url("../images/background/index-mask.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
 }
 
 .welcome-image {
@@ -246,7 +359,7 @@ body {
 }
 
 .advantages-description {
-  margin: 0 0 30px;
+  margin: 0;
 }
 
 .advantages-number {
@@ -316,10 +429,12 @@ body {
   width: 400px;
   padding: 80px 85px;
   box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center top 80px;
 }
 
 .town-advantages-description {
-  margin: 0 auto 30px;
+  margin: 0 auto;
   max-width: 230px;
 }
 
@@ -328,8 +443,22 @@ body {
 }
 
 .town-advantages-title {
+  margin-top: 102px;
   color: #000000;
 }
+
+.housing {
+  background-image: url("../images/adventages/housing.svg");
+}
+
+.meal {
+  background-image: url("../images/adventages/food.svg");
+}
+
+.souvenirs {
+  background-image: url("../images/adventages/souvenir.svg")
+}
+
 
 .search-hotel {
   padding-top: 91px;
@@ -358,7 +487,7 @@ body {
   padding: 94px 200px;
   text-align: center;
   color: #ffffff;
-  background-image: url(../images/background/subscibe-background.jpg);
+  background-image: url("../images/background/subscibe-background.jpg");
   background-size: 100% 411px;
   background-repeat: no-repeat;
 }
@@ -404,8 +533,7 @@ body {
 .footer-container {
   display: flex;
   margin: 0 auto;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding: 40px 70px 30px;
   align-items: center;
 }
 
@@ -417,16 +545,31 @@ body {
 .social-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 45px;
-  margin-bottom: 35px;
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.button {
+.social-item {
+  width: 48px;
+}
+
+.social-link {
   display: block;
-  min-width: 48px;
-  min-height: 40px;
+  min-width: 28px;
+  padding: 20px 10px;
+}
+
+.social-link:hover .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .contacts {
@@ -435,8 +578,6 @@ body {
 
 .contacts-phone {
   display: block;
-  margin-top: 40px;
-  margin-bottom: 30px;
   min-width: 720px;
   font-size: 40px;
   line-height: 40px;
@@ -446,16 +587,56 @@ body {
   color: inherit;
 }
 
+.contacts-phone:hover {
+  color: #756157;
+}
+
+.contacts-phone:focus {
+  color: #756157;
+
+}
+
+.contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .copyright-logo {
   margin-left: auto;
   width: 115px;
+}
+
+.copyright-logo-link {
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.copyright-logo-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.copyright-logo-link:hover .copyright-logo-image {
+  fill: #756157;
+}
+
+.copyright-logo-link:active .copyright-logo-image {
+  fill: #756157;
+}
+
+.copyright-logo-link:focus .copyright-logo-image {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .inner-header {
   padding: 35px 70px 70px;
   background-color: #000000;
   color: #ffffff;
-  background-image: url(../images/background/filter-background.jpg);
+  background-image: url("../images/background/filter-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -474,16 +655,36 @@ body {
   min-width: 110px;
   margin: 0 auto 40px;
   padding: 0;
+  align-items: center;
   list-style-type: none;
 }
 
-.breadcrumb-link {
-  min-height: 21px;
-  margin-right: 25px;
+.breadcrumb-item {
+  margin-right: 10px;
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
 }
+
+.breadcrumb-link:hover,
+.breadcrumb-link:hover .breadcrumb-icon {
+  color: rgba(255, 255, 255, 0.6);
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb-link:active,
+.breadcrumb-link:active .breadcrumb-icon {
+  color: rgba(255, 255, 255, 0.3);
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumb-link:focus,
+.breadcrumb-link:focus .breadcrumb-icon {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+
 
 .filter {
   display: flex;
@@ -559,6 +760,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .button {
@@ -566,6 +768,42 @@ body {
   min-width: 48px;
   min-height: 48px;
   margin-left: 8px;
+  padding: 17px 16px;
+  box-sizing: border-box;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.button:hover,
+.button:active {
+  border: 2px solid #000000;
+}
+
+.button:focus {
+  border: 2px solid #68A2CA;
+}
+
+.button-current {
+  border: 2px solid #000000;
+}
+
+/* почему-то иконки меньше оригинала */
+.casds-button {
+  background-image: url("../images/icons/cards-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gallery-button {
+  background-image: url("../images/icons/gallery-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list-button {
+  background-image: url("../images/icons/list-veiw.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hotels-list {
@@ -619,16 +857,43 @@ body {
   color: #333333;
 }
 
+.four-stars {
+  width: 89px;
+  height: 17px;
+  background-image: url("../images/catalog/star.svg");
+  background-repeat: space;
+  background-position: left center; /* не выравнивает*/
+}
+
+.three-stars {
+  width: 65px;
+  height: 17px;
+  background-image: url("../images/catalog/star.svg");
+  background-repeat: space;
+  background-position: left center;
+}
+
+.two-stars {
+  width: 40px;
+  height: 17px;
+  background-image: url("../images/catalog/star.svg");
+  background-repeat: space;
+  background-position: left center;
+}
+
 .hotel-raiting {
   margin: 0;
+  padding: 9px 15px;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: #333333;
   background-color: #F2F2F2;
+  border-radius: 4px;
 }
 
 .pagination-view {
+  position: relative;
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -640,7 +905,7 @@ body {
   display: flex;
   width: 400px;
   margin: 0;
-  padding: 0;
+  padding: 30px 0 25px;
   list-style-type: none;
 }
 
@@ -648,6 +913,8 @@ body {
   width: 60px;
   display: block;
   margin-right: 8px;
+  padding-top: 11px;
+  padding-bottom: 12px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -655,11 +922,40 @@ body {
   text-decoration: none;
   color: #ffffff;
   background-color: #82B3D3;
+  border: 1px solid #82B3D3;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.pagination-link:hover,
+.pagination-link:focus {
+  background-color: #68A2CA;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-current {
   color: #000000;
   background-color: #F2F2F2;
+  border: none;
+}
+
+.pagination-current:hover,
+.pagination-current:active,
+.pagination-current:focus {
+  background-color: #F2F2F2;
+}
+
+.pagination-view::before {
+  content: "";
+  position: absolute;
+  width: 1055px;
+  height: 0;
+  top: 0;
+  bottom: 115px;
+  border-top: 1px solid #E6E6E6;
 }
 
 .page-items {
