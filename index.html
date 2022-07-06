@@ -116,7 +116,7 @@
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <p class="search-hotel-title">Заинтересовались?</p>
         <p class="search-hotel-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
-          гостиниц в Седоне
+          гостиниц в Седоне&nbsp;&nbsp;
         </p>
         <a class="search-button basic-button" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
       </section>
@@ -189,6 +189,42 @@
         </section>
       </div>
     </footer>
+  </div>
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-search">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
+          <p class="field-group field-dates">
+            <label class="arrival-date-label" for="arrival-date">Дата заезда:</label>
+            <input class="field-date" type="text" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020">
+          </p>
+          <p class="field-group field-dates">
+            <label class="departure-date-label" for="departure-date">Дата выезда:</label>
+            <input class="field-date" type="text" id="departure-date" name="departure-date"
+              placeholder="1 сентября 2021">
+          </p>
+          <p class="field-group field-adult-amount">
+            <label class="adult-label" for="adult-amount">Взрослые:</label>
+            <input class="field-amount" type="number" id="adult-amount" name="adult-amount" min="0" max="10" value="2">
+          </p>
+          <p class="field-group field-child-amount">
+            <label class="child-label" for="child-amount">Дети:</label>
+            <span class="tooltip">
+              <button class="tooltip-toogle" type="button" aria-labelledby="tooltip-label"></button>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
+                вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+            </span>
+            <input class="field-amount" type="number" id="child-amount" name="child-amount" min="0" max="10" value="1">
+          </p>
+          <button class="search-form-button" type="submit" value="Найти">Найти</button>
+        </form>
+      </section>
+    </div>
   </div>
 </body>
 
