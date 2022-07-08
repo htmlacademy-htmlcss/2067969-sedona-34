@@ -192,35 +192,65 @@
   </div>
   <div class="modal-container modal-container-close">
     <div class="modal modal-search">
-      <button class="modal-close-button">
+      <button class="modal-close-button" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
       <section class="modal-content">
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
         <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
-          <p class="field-group field-dates">
+          <div class="field-group arrival-field-dates">
             <label class="arrival-date-label" for="arrival-date">Дата заезда:</label>
-            <input class="field-date" type="text" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020">
-          </p>
-          <p class="field-group field-dates">
+            <input class="field-date" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату" value="27 апреля 2020">
+            <p class="error">Мы не можем отправить вас в прошлое.</p>
+          </div>
+          <div class="field-group departure-field-dates">
             <label class="departure-date-label" for="departure-date">Дата выезда:</label>
             <input class="field-date" type="text" id="departure-date" name="departure-date"
-              placeholder="1 сентября 2021">
-          </p>
-          <p class="field-group field-adult-amount">
+              placeholder="Укажите дату" value="1 сентября 2021">
+            <p class="valid">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+          <div class="field-group field-adult-amount">
             <label class="adult-label" for="adult-amount">Взрослые:</label>
-            <input class="field-amount" type="number" id="adult-amount" name="adult-amount" min="0" max="10" value="2">
-          </p>
-          <p class="field-group field-child-amount">
+            <input class="field-amount adult-amount" type="number" id="adult-amount" name="adult-amount" value="2"
+              required>
+            <button class="button-amount adult-minus" type="button">
+              <svg clacc="minus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0v1h13V0H0Z" />
+              </svg>
+            </button>
+            <button class="button-amount adult-plus" type="button">
+              <svg class="plus" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="field-group field-child-amount">
             <label class="child-label" for="child-amount">Дети:</label>
             <span class="tooltip">
-              <button class="tooltip-toogle" type="button" aria-labelledby="tooltip-label"></button>
+              <button class="tooltip-toogle" type="button" aria-labelledby="tooltip-label">
+                <span class="visually-hidden">Информация</span>
+                <!-- <span class="tooltip-icon">i</span> -->
+              </button>
               <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
                 вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
             </span>
-            </span>
-            <input class="field-amount" type="number" id="child-amount" name="child-amount" min="0" max="10" value="1">
-          </p>
+            <input class="field-amount child-amount" type="number" id="child-amount" name="child-amount" value="1"
+              required>
+            <button class="button-amount child-minus" type="button">
+              <svg clacc="minus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0v1h13V0H0Z" />
+              </svg>
+            </button>
+            <button class="button-amount child-plus" type="button">
+              <svg class="plus" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
+              </svg>
+            </button>
+          </div>
           <button class="search-form-button" type="submit" value="Найти">Найти</button>
         </form>
       </section>

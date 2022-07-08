@@ -233,12 +233,12 @@ body {
 }
 
 .page-header-logo:hover {
-  opacity: 60%;
+  opacity: 70%;
 }
 
 .page-header-logo:focus {
   outline: none;
-  box-shadow: inset 0 0 0 2px #83B3D3;
+  background-color: rgba(242, 242, 242, 0.8);
 }
 
 .page-header-logo:active {
@@ -301,12 +301,12 @@ body {
 }
 
 .navigation-link:hover {
-  box-shadow: inset 0 0 0 2px #83B3D3;
+  opacity: 70%;
 }
 
 .navigation-link:focus {
   outline: none;
-  box-shadow: inset 0 0 0 2px #83B3D3;
+  background-color: rgba(242, 242, 242, 0.8);
 }
 
 .navigation-link:active {
@@ -334,12 +334,12 @@ body {
 }
 
 .user-list-link:hover {
-  box-shadow: inset 0 0 0 2px #83B3D3;
+  opacity: 70%;
 }
 
 .user-list-link:focus {
   outline: none;
-  box-shadow: inset 0 0 0 2px #83B3D3;
+  background-color: rgba(242, 242, 242, 0.8);
 }
 
 .user-list-link:active {
@@ -348,6 +348,8 @@ body {
 
 .user-list-counter {
   position: absolute;
+  padding-top: 3px;
+  padding-bottom: 3px;
   top: 15px;
   left: 23px;
   width: 20px;
@@ -360,8 +362,8 @@ body {
   letter-spacing: -0.1em;
   color: #FFFFFF;
   text-decoration: none;
-  text-align: center;
   display: block;
+  box-sizing: border-box;
 }
 
 .main-container {
@@ -615,14 +617,19 @@ body {
 }
 
 /* этих состояний нет  в стайлгаде, но сам элементв стайлгайде есть, не будет ли это считаться ошибкой?*/
-.e-mail-field:hover,
-.e-mail-field:active {
-  box-shadow: inset 0 0 0 2px #333333;
+.e-mail-field:hover {
+  background-color: rgba(242, 242, 242, 0.8);
 }
 
 .e-mail-field:focus {
   outline: none;
-  box-shadow: inset 0 0 0 2px #333333;
+  box-shadow: inset 0 0 0 2px #82B3D3;
+}
+
+.e-mail-field:active {
+  background-color: #FFFFFF;
+  box-shadow: inset 0 0 0 2px #000000;
+  color: #000000;
 }
 
 .e-mail-field:disabled {
@@ -782,13 +789,14 @@ body {
 .breadcrumb-item {
   margin-right: 10px;
   text-decoration: none;
+  padding-right: 15px;
 }
 
-.breadcrumb-item:last-child {
+/* .breadcrumb-item:last-child {
   padding-left: 15px;
-}
+} */
 
-.breadcrumb-item:last-child::before {
+.breadcrumb-item ~ .breadcrumb-item:after {
   content: "";
   position: absolute;
   width: 5px;
@@ -1008,8 +1016,6 @@ body {
 }
 
 .price-input:focus {
-  border: 2px solid #ffffff;
-  /* добавила, чтобы браузерный фокус не появлялся, но он все равно ярко синий*/
   box-shadow: 0px 0px 0px 3px #81B3D2,
     inset 0px 0px 0px 3px #81B3D2;
   outline: none;
@@ -1030,7 +1036,7 @@ body {
   margin: 0;
 }
 
-.price-input[type='number'] {
+.price-input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -1089,7 +1095,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  /* margin: 60px 0 40px; */
 }
 
 .catalog-view {
@@ -1213,7 +1218,6 @@ body {
   color: #000000;
 }
 
-/* нужны ли эти состояния? их нет в гайде */
 .hotel-card-link:hover {
   opacity: 70%
 }
@@ -1399,13 +1403,13 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
 }
 
 .modal {
   position: relative;
-  /* fixed */
-  margin: auto;
-  padding: 62px 70px 70px;
+  margin: auto auto;
+  padding: 62px 68px 70px;
   background-color: #ffffff;
 }
 
@@ -1413,6 +1417,7 @@ body {
   width: 715px;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+  box-sizing: border-box;
 }
 
 .modal-close-button {
@@ -1431,8 +1436,25 @@ body {
   cursor: pointer;
 }
 
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+}
+
+.modal-close-button:active{
+  background-color: #E6E6E6;
+  background-image: url("../images/icons/cross-grey.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .modal-title {
   margin: 0;
+  padding: 0;
   margin-bottom: 63px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
@@ -1440,6 +1462,39 @@ body {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 90px) 60px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.arrival-field-dates {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.departure-field-dates {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.field-adult-amount {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.field-child-amount {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.search-form-button {
+  grid-column: 1 / -1;
+  grid-row: 4;
 }
 
 .field-group {
@@ -1453,83 +1508,326 @@ body {
   text-transform: capitalize;
 }
 
-.search-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 50px 50px 60px;
-  row-gap: 40px;
-}
-
-.field-dates {
-  grid-column: 1 / -1;
-}
-
-.field-adult-amount {
-  grid-column: 1;
-}
-
-.field-child-amount {
-  grid-column: 2;
-}
-
-.search-form-button {
-  grid-column: 1 / -1;
-}
-
 .field-date {
   width: 420px;
   margin-right: auto;
-  padding: 15px auto 14px 19px;
+  padding: 15px 260px 14px 19px;
   background: #F2F2F2;
+  background-image: url("../images/icons/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 19px center;
   border: none;
   border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+  box-sizing: border-box;
 }
 
+.field-date:hover {
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.field-date:focus {
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.field-date:active {
+  background-color: #FFFFFF;
+  color: #000000;
+  box-shadow: 0 0 0 2px #000000;;
+}
+
+.field-date:disabled {
+  opacity: 30%;
+}
+
+.arrival-date-label {
+  margin-right: 36px;
+}
+
+.departure-date-label {
+  margin-right: 30px;
+}
+
+.error {
+  margin: 8px 0 10px 155px;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: none;
+  color: #FF5757;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.valid {
+  margin: 8px 0 10px 155px;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: none;
+  color: #000000;
+  grid-column: 1 / -1;
+  justify-self: end;
+}
+
+.field-amount {
+  width: 133px;
+  padding: 15px 30px 14px 30px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.field-amount:hover {
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.field-amount:focus {
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.field-amount:active {
+  background-color: #FFFFFF;
+  color: #000000;
+  box-shadow: 0 0 0 2px #000000;;
+}
+
+.field-amount:disabled {
+  opacity: 30%;
+}
+
+.adult-label {
+  margin-right: 58px;
+}
+
+.child-label {
+  margin-right: 44px;
+  margin-left: 55px;
+}
+
+.field-adult-amount {
+  position: relative;
+}
+
+.field-child-amount {
+  position: relative;
+}
+
+.button-amount {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  box-sizing: border-box;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.button-amount svg {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.button-amount:hover svg {
+  fill:  #000000;
+}
+
+.button-amount:focus svg {
+  fill:  #000000;
+}
+
+.button-amount:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.button-amount:active svg {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.adult-minus {
+  position: absolute;
+  top: 12px;
+  right: 95px;
+  padding-bottom: 12px;
+}
+
+.adult-plus {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  padding-top: 3px;
+}
+
+.child-minus {
+  position: absolute;
+  top: 12px;
+  right: 96px;
+  padding-bottom: 13px;
+}
+
+.child-plus {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  padding-top: 3px;
+}
+
+.field-amount::-webkit-outer-spin-button,
+.field-amount::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.field-amount[type="number"] {
+  -moz-appearance: textfield;
+}
 
 .tooltip {
   position: absolute;
-  /* margin-top: 4px;
-  margin-left: 2px;
-  width: 16px;
-  height: 16px; */
+  top: 14px;
+  left: 108px;
 }
 
 .tooltip-toogle {
-  margin: 0;
+  margin-bottom: 6px;
+  margin-left: 2px;
   padding: 0;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background-color: #83B3D3;
   border: none;
-  background-image: url("../images/icons/info.svg");
+  /* background-image: url("../images/icons/info.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
   cursor: pointer;
   display: block;
+}
+ /* сделала i псевдоэлементами и это совсем плохо выглядит, но если вставлять текст, он больше по размеру немного */
+.tooltip-toogle::before {
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  content: "";
+  width: 1px;
+  height: 1px;
+  background-color: #FFFFFF;
+}
+
+.tooltip-toogle::after {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  content: "";
+  width: 6px;
+  height: 1px;
+  background-color: #FFFFFF;
+  transform: rotate(90deg);
 }
 
 .tooltip-toogle:hover {
   background-color: #68A2CA;
 }
 
+.tooltip-toogle:focus {
+  outline: none;
+}
+
+.tooltip-toogle:active {
+  opacity: 30%;
+}
+
 .tooltip-text {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 23px;
+  transform: translateX(-44%)  translateY(145%);
+  width: 256px;
   background-color: #333333;
   color: #ffffff;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 21px;
+  font-weight: 400;
   text-transform: none;
-  padding: 15px 18px 18px 22px;
+  padding: 15px 18px 22px 22px;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  border: none;
   display: block;
-  width: 256px;
+  box-sizing: border-box;
+  display: none;
 }
 
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  left: 119px;
+  top: -18px;
+  border: 9px solid transparent;
+  border-bottom: 9px solid #333333;
+}
+
+/* класс закрытия модального окна */
 .modal-container-close {
   display: none;
 }
+
+.search-form-button {
+  width: 575px;
+  padding: 12px 26px;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #83B3D3;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.search-form-button:hover {
+  background-color: #68A2CA;
+}
+
+.search-form-button:focus {
+  background-color: #68A2CA;
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
+}
+
+.search-form-button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+}
+
+
