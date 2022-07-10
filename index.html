@@ -124,9 +124,9 @@
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="http://echo.htmlacademy.ru" method="post">
-          <label for="e-mail" class="visually-hidden">E-mail</label>
-          <input type="email" class="e-mail-field" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
-          <button type="submit" class="subscribe-button basic-button">Подписаться</button>
+          <label class="visually-hidden" for="e-mail">E-mail</label>
+          <input class="e-mail-field" type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
+          <button class="subscribe-button basic-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -200,13 +200,14 @@
         <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
           <div class="field-group arrival-field-dates">
             <label class="arrival-date-label" for="arrival-date">Дата заезда:</label>
-            <input class="field-date" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату" value="27 апреля 2020">
+            <input class="field-date" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату"
+              value="27 апреля 2020">
             <p class="error">Мы не можем отправить вас в прошлое.</p>
           </div>
           <div class="field-group departure-field-dates">
             <label class="departure-date-label" for="departure-date">Дата выезда:</label>
-            <input class="field-date" type="text" id="departure-date" name="departure-date"
-              placeholder="Укажите дату" value="1 сентября 2021">
+            <input class="field-date" type="text" id="departure-date" name="departure-date" placeholder="Укажите дату"
+              value="1 сентября 2021">
             <p class="valid">На эти даты есть свободные номера. Пока есть.</p>
           </div>
           <div class="field-group field-adult-amount">
@@ -214,7 +215,7 @@
             <input class="field-amount adult-amount" type="number" id="adult-amount" name="adult-amount" value="2"
               required>
             <button class="button-amount adult-minus" type="button">
-              <svg clacc="minus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1"
+              <svg class="minus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0v1h13V0H0Z" />
               </svg>
@@ -231,7 +232,6 @@
             <span class="tooltip">
               <button class="tooltip-toogle" type="button" aria-labelledby="tooltip-label">
                 <span class="visually-hidden">Информация</span>
-                <!-- <span class="tooltip-icon">i</span> -->
               </button>
               <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
                 вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
@@ -239,7 +239,7 @@
             <input class="field-amount child-amount" type="number" id="child-amount" name="child-amount" value="1"
               required>
             <button class="button-amount child-minus" type="button">
-              <svg clacc="minus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1"
+              <svg class="minus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0v1h13V0H0Z" />
               </svg>

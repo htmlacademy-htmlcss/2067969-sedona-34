@@ -616,7 +616,6 @@ body {
   box-sizing: border-box;
 }
 
-/* этих состояний нет  в стайлгаде, но сам элементв стайлгайде есть, не будет ли это считаться ошибкой?*/
 .e-mail-field:hover {
   background-color: rgba(242, 242, 242, 0.8);
 }
@@ -793,11 +792,7 @@ body {
   position: relative;
 }
 
-/* .breadcrumb-item:last-child {
-  padding-left: 15px;
-} */
-
-.breadcrumb-item ~ .breadcrumb-item:after {
+.breadcrumb-item~.breadcrumb-item:after {
   content: "";
   position: absolute;
   width: 5px;
@@ -820,15 +815,10 @@ body {
   opacity: 30%;
 }
 
-.breadcrumb-link:focus {
-  color: #ffffff;
-  outline: none;
-}
+/* если эти состояния как и покой без изменений удалить их совсем? */
+.breadcrumb-link:focus {}
 
-/* href прописан браузерный фокус проходит мимо */
-.breadcrumb-link:focus .breadcrumb-icon {
-  outline: none;
-}
+.breadcrumb-link:focus .breadcrumb-icon {}
 
 .filter {
   display: flex;
@@ -871,7 +861,7 @@ body {
   display: block;
   font-size: 18px;
   line-height: 21px;
-  padding-left: 40px;
+  padding-left: 42px;
 }
 
 .control:not(:last-child) {
@@ -909,7 +899,7 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input[type="checkbox"]:checked+.control-mark {
+.control-input[type="checkbox"]:checked + .control-mark {
   background-image: url("../images/icons/checkmark.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -929,22 +919,21 @@ body {
   background-color: #ffffff;
 }
 
-/* браузерный фокус не срабатывает */
-.control-input[type="radio"]:focus+.radio-mark {
-  background-color: #ffffff;
-  box-shadow: inset 0 0 0 3px #83B3D3;
-}
-
-.control-input[type="radio"]:checked:focus+.radio-mark {
+.control-input[type="radio"]:checked:focus + .radio-mark {
   background-color: #ffffff;
   box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.control-input[type="radio"]:focus + .radio-mark {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 3px #83B3D3;
 }
 
 .control:active .radio-mark {
   background-color: #ffffff;
 }
 
-.control-input[type="radio"]:checked+.radio-mark::before {
+.control-input[type="radio"]:checked + .radio-mark::before {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -1139,14 +1128,14 @@ body {
   width: 290px;
   height: 49px;
   margin-right: 70px;
-  padding: 12px 30px 12px 20px;
+  padding: 12px 30px 12px 18px;
 }
 
 .hotels-results {
   display: block;
   min-width: 338px;
   margin: 0 192px 0 0;
-  padding: 7px 0 0;
+  padding: 10px 0 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -1328,7 +1317,7 @@ body {
   display: flex;
   width: 400px;
   margin: 0;
-  padding: 32px 0 25px;
+  padding: 30px 0 25px;
   list-style-type: none;
 }
 
@@ -1382,9 +1371,7 @@ body {
 }
 
 .page-items {
-  /* width: 386px; */
   margin-left: auto;
-  /* margin-top: 5px; */
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -1446,7 +1433,7 @@ body {
   border: 3px solid #83B3D3;
 }
 
-.modal-close-button:active{
+.modal-close-button:active {
   background-color: #E6E6E6;
   background-image: url("../images/icons/cross-grey.svg");
   background-repeat: no-repeat;
@@ -1541,7 +1528,8 @@ body {
 .field-date:active {
   background-color: #FFFFFF;
   color: #000000;
-  box-shadow: 0 0 0 2px #000000;;
+  box-shadow: 0 0 0 2px #000000;
+  ;
 }
 
 .field-date:disabled {
@@ -1611,7 +1599,7 @@ body {
 .field-amount:active {
   background-color: #FFFFFF;
   color: #000000;
-  box-shadow: 0 0 0 2px #000000;;
+  box-shadow: 0 0 0 2px #000000;
 }
 
 .field-amount:disabled {
@@ -1653,11 +1641,11 @@ body {
 }
 
 .button-amount:hover svg {
-  fill:  #000000;
+  fill: #000000;
 }
 
 .button-amount:focus svg {
-  fill:  #000000;
+  fill: #000000;
 }
 
 .button-amount:focus {
@@ -1722,32 +1710,11 @@ body {
   border-radius: 50%;
   background-color: #83B3D3;
   border: none;
-  /* background-image: url("../images/icons/info.svg");
+  background-image: url("../images/icons/info.svg");
   background-repeat: no-repeat;
-  background-position: center; */
+  background-position: center;
   cursor: pointer;
   display: block;
-}
- /* сделала i псевдоэлементами и это совсем плохо выглядит, но если вставлять текст, он больше по размеру немного */
-.tooltip-toogle::before {
-  position: absolute;
-  top: 8px;
-  left: 14px;
-  content: "";
-  width: 1px;
-  height: 1px;
-  background-color: #FFFFFF;
-}
-
-.tooltip-toogle::after {
-  position: absolute;
-  top: 14px;
-  left: 12px;
-  content: "";
-  width: 6px;
-  height: 1px;
-  background-color: #FFFFFF;
-  transform: rotate(90deg);
 }
 
 .tooltip-toogle:hover {
@@ -1766,7 +1733,7 @@ body {
   position: absolute;
   bottom: 100%;
   margin-bottom: 23px;
-  transform: translateX(-44%)  translateY(145%);
+  transform: translateX(-44%) translateY(145%);
   width: 256px;
   background-color: #333333;
   color: #ffffff;
@@ -1791,6 +1758,12 @@ body {
   top: -18px;
   border: 9px solid transparent;
   border-bottom: 9px solid #333333;
+}
+
+.tooltip:hover .tooltip-text,
+.tooltip-toogle:hover+.tooltip-text,
+.tooltip-toogle:focus+.tooltip-text {
+  display: block;
 }
 
 /* класс закрытия модального окна */
@@ -1828,7 +1801,4 @@ body {
 
 .search-form-button:active {
   color: rgba(255, 255, 255, 0.3);
-
 }
-
-
