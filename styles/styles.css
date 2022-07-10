@@ -790,6 +790,7 @@ body {
   margin-right: 10px;
   text-decoration: none;
   padding-right: 15px;
+  position: relative;
 }
 
 /* .breadcrumb-item:last-child {
@@ -802,7 +803,7 @@ body {
   width: 5px;
   height: 8px;
   top: 6px;
-  left: 24px;
+  left: -16px;
   background-image: url("../images/icons/arrow-right.svg");
   background-repeat: no-repeat;
   background-size: 100%;
