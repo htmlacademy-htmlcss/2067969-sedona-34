@@ -792,7 +792,7 @@ body {
   position: relative;
 }
 
-.breadcrumb-item~.breadcrumb-item:after {
+.breadcrumb-item ~ .breadcrumb-item:after {
   content: "";
   position: absolute;
   width: 5px;
@@ -814,11 +814,6 @@ body {
 .breadcrumb-link:active .breadcrumb-icon {
   opacity: 30%;
 }
-
-/* если эти состояния как и покой без изменений удалить их совсем? */
-.breadcrumb-link:focus {}
-
-.breadcrumb-link:focus .breadcrumb-icon {}
 
 .filter {
   display: flex;
